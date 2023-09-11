@@ -72,6 +72,7 @@
   - Vertex Processor: 3D object -> 2D image
     - 3D object를 2D image로 변환
     - 화면의 정보를 점으로 읽음
+    - 꼭지점을 읽음
   - Clipper and Primitive Assembler: 2D image -> Primitives
     - 점을 선으로 연결, 주어진 도형 가장 많이 삼각형으로 사용
   - Rasterizer: Primitives -> Fragments
@@ -91,3 +92,45 @@
 즉, 벡터로 면의 방향을 읽어 외적, 내적을 통해 빛이 반사되는 과정을 계산
 
 실제로 해당 영상을 보면 간접광이 없이 빛이 하나로 이어지고 면의 색이 일정함 즉, 어색함
+
+## GC03
+
+### 복습
+
+- Vertex 꼭지점을 읽음 이 과정이 Projection
+- Rasterization: 칠해야할 픽셀들, 점들 -> Fragment
+  - 각각의 점마다 색을 결정함 이 과정을 -> Fragment Processing
+  - Fragment Processing: Fragment -> 2D image
+    - 색을 결정하는 과정
+    - 여기서 빛의 반사를 계산하는 것이 중요
+    - 꼭지점으로 이뤄진 삼각형의 색을 결정하는 것이다.
+
+위의 연산은 벡터, 행렬 연산 즉, 실수 계산으로 이뤄짐
+
+이 계산을 얼마나 빠르게 하느냐가 속도에 영향을 줌
+
+![Alt text](image-1.png)
+
+병렬처리에 매우 적합
+
+CPU는 더 복잡한 연산을 수행(메모리 관리, 프로그램 실행 등등) 대부분의 컴퓨터가 4~16개가 있다.
+
+CPU는 비용이 쎄서 이를 대체하기 위해 GPU가 등장
+
+GPU는 병렬처리에 매우 적합하다.
+
+단순한 일 처리에 적합
+
+초창기엔 Graphics processor라고 불렸다.
+
+하지만 발전에 따라 Vertex Processor, Fragment Processor를 직접 프로그래밍할 수 있게 되고
+
+좀 더 많은 일을 담당하게 되었다.
+
+### OpenGL
+
+*OpenGL을 사용하기 앞서 말한 행렬을 반환하는 기능들을 담고 있는 라이브러리*
+
+강의 교안에 따라 설치작업
+
+*개인적으로 Vscode 사용법 알아오기*
