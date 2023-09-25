@@ -28,6 +28,8 @@ const int NumVertex = 6 * 2 * 3;
 vec4 positions[NumVertex];
 vec4 colors[NumVertex];
 
+GLuint prog;
+
 
 void makeRect(int a, int b, int c, int d)
 {
@@ -79,7 +81,7 @@ void myInit()
 
 	//4. Load Shaders
 
-	GLuint prog = InitShader("vshader.glsl", "fshader.glsl");
+	prog = InitShader("vshader.glsl", "fshader.glsl");
 	glUseProgram(prog);
 
 	//5. Connect shader to buffer
@@ -93,20 +95,35 @@ void myInit()
 	glEnableVertexAttribArray(vColor);
 	glVertexAttribPointer(vColor, 4, GL_FLOAT, GL_FALSE, 0,
 		BUFFER_OFFSET(sizeof(positions)));
-
 }
+
+float theta1 = 0;
+float theta2 = 0;
 
 void myDisplay()
 {
-	glClear(GL_COLOR_BUFFER_BIT);
+	GLuint uTheta1 = glGetUniformLocation(prog, "uTheta1");
+	glUniform1f(uTheta1, theta1);
+
+	GLuint uTheta2 = glGetUniformLocation(prog, "uTheta2");
+	glUniform1f(uTheta2, theta2);
+
+	glClear(GL_COLOR_BUFFER_BIT |GL_DEPTH_BUFFER_BIT);
+	glEnable(GL_DEPTH_TEST);
+
 	glDrawArrays(GL_TRIANGLES, 0, NumVertex);
 	glFlush();
+
+	glutSwapBuffers();
+
+	theta1 += 1.0f;
+	theta2 += 1.0f;
 }
 
 int main(int argc, char** argv)
 {
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA );
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
 	glutInitWindowSize(512, 512);
 	glutCreateWindow("Color Cube Example");
 
