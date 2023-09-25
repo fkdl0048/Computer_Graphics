@@ -139,4 +139,116 @@ GPU는 병렬처리에 매우 적합하다.
 
 ## GC06
 
+## GC07
+
+쉐이더는 GPU의 계산에 따라 보이는 위치, 색 등을 결정할 수 있다.
+
+Vertex Shader: Vertex Processor
+
+Fragment Shader: Fragment Processor
+
+OpenGL의 쉐이더는 GLSL이라는 언어로 작성
+
+- C언어와 유사
+  - 하지만 동적할당, 재귀, 다이나믹 등등은 제한
+- 빌트인 수학, 벡터, 행렬 연산등의 함수가 있음
   
+모든 쉐이더는 main함수를 가지고 있어야함
+
+```c
+void main(void) {
+  ...
+}
+```
+
+### GLSL Data Types
+
+- float, int, bool
+- vec2, vec3, vec4 (float vector)
+- ivec2, ivec3, ivec4 (int vector)
+- bvec2, bvec3, bvec4 (bool vector)
+- mat2, mat3, mat4 (float matrix)
+- sampler2D (texture)
+
+생성자처럼 사용 가능함
+
+```c
+vec3 v = vec3(1.0, 2.0, 3.0);
+```
+
+또한 벡터 데이터는 다음과 같이 접근 가능
+
+- x, y, z, w
+- r, g, b, a
+- s, t, p, q
+- 배열과 같이 [0]...
+
+```c
+vec3 v = vec3(1.0, 2.0, 3.0);
+v.x = 4.0;
+v[1] = 5.0;
+```
+
+### GLSL Matrix
+
+- mat2, mat3, mat4
+
+```c
+mat2 m = mat2(1.0, 2.0, 3.0, 4.0);
+
+// [1.0, 2.0]
+// [3.0, 4.0]
+```
+
+실제로 선형대수학을 컴퓨터에 맞게 사용하려면 row-major가 아닌 column-major로 사용해야함
+
+### GLSL Example
+
+```c
+#version 330
+
+uniform	float uTheta1;
+uniform	float uTheta2;
+
+in vec4 vPosition;
+in vec4 vColor;
+
+out vec4 color;
+
+void main()
+{
+	float rad1 = uTheta1 / 180.0 * 3.141592;
+	mat4 m = mat4(1.0);
+	m[0][0] = cos(rad1); m[1][0] = 0; m[2][0] = sin(rad1); m[3][0] = 0; 
+	m[0][1] = 0; m[1][1] = 1; m[2][1] = 0; m[3][1] = 0;
+	m[0][2] =  -sin(rad1); m[1][2] = 0; m[2][2] = cos(rad1); m[3][2] = 0;
+	m[0][3] = 0; m[1][3] = 0; m[2][3] = 0; m[3][3] = 1;
+
+	float rad2 = uTheta2 / 180.0 * 3.141592;
+	mat4 n = mat4(1.0);
+	n[0][0] = 1; n[1][0] = 0; n[2][0] = 0; n[3][0] = 0; 
+	n[0][1] = 0; n[1][1] = cos(rad2); n[2][1] = -sin(rad2) ; n[3][1] = 0;
+	n[0][2] = 0; n[1][2] = sin(rad2); n[2][2] = cos(rad2); n[3][2] = 0;
+	n[0][3] = 0; n[1][3] = 0; n[2][3] = 0; n[3][3] = 1; 
+	
+	gl_Position = m*n*vPosition;
+
+	color = vColor;
+}
+```
+
+이 쉐이더 코드에서 in, out은 다음과 같이 사용
+
+- in: Vertex Shader -> Fragment Shader
+- out: Fragment Shader -> Frame Buffer
+
+즉 넘겨주는 역할
+
+![Alt text](image-2.png)
+
+여기서 gl_Position은 Vertex Shader의 내장 변수로 Vertex Shader의 결과를 저장하는 변수
+
+Uniform은 CPU에서 GPU로 데이터를 전달하는 역할
+
+즉 실제 코드에서 쉐이더관련을 직접 제어하기 좋음
+
