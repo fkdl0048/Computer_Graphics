@@ -116,8 +116,17 @@ void myDisplay()
 
 	glutSwapBuffers();
 
-	theta1 += 1.0f;
-	theta2 += 1.0f;
+
+}
+
+void myIdle()
+{
+	Sleep(16);
+
+	theta1 += 1;
+	theta2 += 0.3;
+	
+	glutPostRedisplay();
 }
 
 int main(int argc, char** argv)
@@ -133,6 +142,8 @@ int main(int argc, char** argv)
 	myInit();
 
 	glutDisplayFunc(myDisplay);
+	glutIdleFunc(myIdle);
+
 	glutMainLoop();
 
 	return 0;

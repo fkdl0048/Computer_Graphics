@@ -1,2 +1,3 @@
 ﻿  ColorCube.cpp
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\ColorCube\ColorCube\ColorCube.cpp(127,15): warning C4305: '+=': 'double'에서 'float'(으)로 잘립니다.
   ColorCube.vcxproj -> C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\ColorCube\Debug\ColorCube.exe

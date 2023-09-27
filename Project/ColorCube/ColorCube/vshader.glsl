@@ -1,5 +1,7 @@
 #version 330
 
+uniform float uTime;
+
 uniform	float uTheta1;
 uniform	float uTheta2;
 
@@ -7,9 +9,11 @@ in vec4 vPosition;
 in vec4 vColor;
 
 out vec4 color;
+out vec4 position;
 
 void main()
 {
+	
 	float rad1 = uTheta1 / 180.0 * 3.141592;
 	mat4 m = mat4(1.0);
 	m[0][0] = cos(rad1); m[1][0] = 0; m[2][0] = sin(rad1); m[3][0] = 0; 
@@ -27,4 +31,5 @@ void main()
 	gl_Position = m*n*vPosition;
 
 	color = vColor;
+	position = vPosition;
 }
