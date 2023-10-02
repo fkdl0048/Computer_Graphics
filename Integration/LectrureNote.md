@@ -305,4 +305,3 @@ Idle -> Display -> ..
 ### homework
 
 gpu에 버퍼만 보내서 개수를 제어
-

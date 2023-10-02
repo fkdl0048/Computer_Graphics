@@ -138,6 +138,7 @@ int main(int argc, char** argv)
 
 	glewExperimental = true;
 	glewInit();
+	
 
 	myInit();
 
