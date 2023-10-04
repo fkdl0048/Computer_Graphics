@@ -10,27 +10,23 @@ out vec4 position;
 
 void main()
 {
-	float uTheta1 = uTime*60;
-	float uTheta2 = uTime*20;
+	float uThetaX = -45;
+	float uThetaY = 16 * uTime;
+	
+	float rad1 = uThetaX / 180.0 * 3.141592f;
+	mat4 x_mat = mat4(1.0);							// x - rotation
+	x_mat[1][1] = cos(rad1);	x_mat[2][1] = -sin(rad1);
+	x_mat[1][2] = sin(rad1);	x_mat[2][2] = cos(rad1);
 
-	float rad1 = uTheta1 / 180.0 * 3.141592;
-	mat4 m = mat4(1.0);							// y - rotation
-	m[0][0] = cos(rad1);m[1][0] = 0;		m[2][0] = sin(rad1);m[3][0] = 0;
-	m[0][1] = 0;		m[1][1] = 1;		m[2][1] = 0;		m[3][1] = 0;
-	m[0][2] =-sin(rad1);m[1][2] = 0;		m[2][2] = cos(rad1);m[3][2] = 0;
-	m[0][3] = 0;		m[1][3] = 0;		m[2][3] = 0;		m[3][3] = 1;
+	float rad3 = uThetaY / 160.0f * 3.141592;
+	mat4 y_mat = mat4(1.0);							// y - rotation
+	y_mat[0][0] = cos(rad3);	y_mat[0][2] = sin(rad3);
+	y_mat[2][0] = -sin(rad3);	y_mat[2][2] = cos(rad3);
 
-	float rad2 = uTheta2 / 180.0 * 3.141592;
-	mat4 n = mat4(1.0);							// x - rotation
-	n[0][0] = 1;		n[1][0] = 0;		n[2][0] = 0;		n[3][0] = 0;
-	n[0][1] = 0;		n[1][1] = cos(rad2);n[2][1] =-sin(rad2);n[3][1] = 0;
-	n[0][2] = 0;		n[1][2] = sin(rad2);n[2][2] = cos(rad2);n[3][2] = 0;
-	n[0][3] = 0;		n[1][3] = 0;		n[2][3] = 0;		n[3][3] = 1;
-
-	gl_Position = (sin(uTime) * 0.5 + 0.6) * n*m* vPosition;
+	gl_Position = vPosition * y_mat * x_mat * waveMat;
 	gl_Position.w = 1.0f;
 
-
+	// 컬러, 위치 F쉐이더로 전달
 	color = vColor;
 	position = vPosition;
 }

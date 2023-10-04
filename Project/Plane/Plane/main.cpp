@@ -1,42 +1,50 @@
-#include <vgl.h>
-#include <InitShader.h>
-#include <vec.h>
-#include "MyColorCube.h"
+#include "Plane.h"
 
-MyColorCube cube;
-
+Plane plane;
 
 bool bPlay = false;
 float mytime = 0;
 
 void myInit()
 {
-	cube.init();
+	plane.init();
 }
 
-void myDisplay()
+void display()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glEnable(GL_DEPTH_TEST);
 	
-	cube.draw(mytime);
+	plane.draw(mytime);
 
 	glutSwapBuffers();
 }
+
 void myIdle()
 {
 	if (bPlay != true) return;
 
 	Sleep(16);
-	mytime += 0.016;
+	mytime += 0.016f;
 
-	glutPostRedisplay();
+	glutPostRedisplay(); // 다시 그리기 호출
 }
+
 void myKeyboard(unsigned char c, int x, int y)
 {
-	printf("c=%c x=%d y=%d\n", c, x, y);
 	if (c == ' ')
 		bPlay = !bPlay;
+
+	if (c == '2')
+	{
+		plane.increaseLength();
+		display();
+	}
+	if (c == '1')
+	{
+		plane.declineLength();
+		display();
+	}
 }
 
 int main(int argc, char** argv)
@@ -51,10 +59,9 @@ int main(int argc, char** argv)
 
 	myInit();
 
-	glutDisplayFunc(myDisplay);
+	glutDisplayFunc(display);
 	glutIdleFunc(myIdle);
 	glutKeyboardFunc(myKeyboard);
-
 
 	glutMainLoop();
 
