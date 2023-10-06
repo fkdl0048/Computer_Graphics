@@ -6,6 +6,12 @@
 #include <InitShader.h>
 #include <string>
 
+struct VertexInfo
+{
+	vec4 pos;
+	vec4 color;
+};
+
 class Plane
 {
 public:
@@ -14,20 +20,22 @@ public:
 	void increaseLength();
 	void declineLength();
 	void draw(float cur_time);
+	void wave();
 	//~MyColorCube();
 
 private:
 	int NumVertex;
 	int length;
+	bool bWave;
 	GLuint prog;
 	GLuint vao;
 	GLuint vbo;
 	GLuint uTime;
+	GLuint uWave;
 	GLuint vPosition;
 	GLuint vColor;
 
-	vec4* positions;
-	vec4* colors;
+	VertexInfo* vertexInfo;
 
 	vec4 vertex_color[2] = {
 		vec4(0.5f, 0.5f, 0.5f, 1),
@@ -44,9 +52,9 @@ private:
 Plane::Plane()
 {
 	length = 2;
-	NumVertex = 2 * 3 * length * length; // 초기값 설정
-	positions = nullptr;
-	colors = nullptr;
+	NumVertex = 2 * 3 * length * length;
+	vertexInfo = nullptr;
+	bWave = false;
 }
 
 void Plane::init()
@@ -56,13 +64,24 @@ void Plane::init()
 	glGenVertexArrays(1, &vao);
 	glGenBuffers(1, &vbo);
 
+	glBindVertexArray(vao);
+	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+
 	prog = InitShader("vshader.glsl", "fshader.glsl");
 	glUseProgram(prog);
 
 	vPosition = glGetAttribLocation(prog, "vPosition");
+	glEnableVertexAttribArray(vPosition);
+
+
 	vColor = glGetAttribLocation(prog, "vColor");
+	glEnableVertexAttribArray(vColor);
+
+	glVertexAttribPointer(vColor, 4, GL_FLOAT, GL_FALSE, sizeof(VertexInfo), BUFFER_OFFSET(sizeof(vec4)));
+	glVertexAttribPointer(vPosition, 4, GL_FLOAT, GL_FALSE, sizeof(VertexInfo), BUFFER_OFFSET(0));
 
 	uTime = glGetUniformLocation(prog, "uTime");
+	uWave = glGetUniformLocation(prog, "uWave");
 
 	bufferLogic();
 }
@@ -101,8 +120,7 @@ void Plane::makePlane()
 {
 	NumVertex = 2 * 3 * (length * length);
 
-	positions = new vec4[NumVertex];
-	colors = new vec4[NumVertex];
+	vertexInfo = new VertexInfo[NumVertex];
 
 	int cur = 0;
 	float pivot = (float)1 / length;
@@ -114,13 +132,13 @@ void Plane::makePlane()
 		y += pivot;
 		for (int j = 0; j < length; j++)
 		{
-			positions[cur] = vec4(x			, 0, y			, 1);	colors[cur] = vertex_color[(j + i) % 2]; cur++;
-			positions[cur] = vec4(x			, 0, y - pivot	, 1);	colors[cur] = vertex_color[(j + i) % 2]; cur++;
-			positions[cur] = vec4(x + pivot	, 0, y - pivot	, 1);	colors[cur] = vertex_color[(j + i) % 2]; cur++;
+			vertexInfo[cur].pos = vec4(x			, 0, y			, 1);	vertexInfo[cur].color = vertex_color[(j + i) % 2]; cur++;
+			vertexInfo[cur].pos = vec4(x			, 0, y - pivot	, 1);	vertexInfo[cur].color = vertex_color[(j + i) % 2]; cur++;
+			vertexInfo[cur].pos = vec4(x + pivot	, 0, y - pivot	, 1);	vertexInfo[cur].color = vertex_color[(j + i) % 2]; cur++;
 
-			positions[cur] = vec4(x			, 0, y			, 1);	colors[cur] = vertex_color[(j + i) % 2]; cur++;
-			positions[cur] = vec4(x + pivot	, 0, y - pivot	, 1);	colors[cur] = vertex_color[(j + i) % 2]; cur++;
-			positions[cur] = vec4(x + pivot	, 0, y			, 1);	colors[cur] = vertex_color[(j + i) % 2]; cur++;
+			vertexInfo[cur].pos = vec4(x			, 0, y			, 1);	vertexInfo[cur].color = vertex_color[(j + i) % 2]; cur++;
+			vertexInfo[cur].pos = vec4(x + pivot	, 0, y - pivot	, 1);	vertexInfo[cur].color = vertex_color[(j + i) % 2]; cur++;
+			vertexInfo[cur].pos = vec4(x + pivot	, 0, y			, 1);	vertexInfo[cur].color = vertex_color[(j + i) % 2]; cur++;
 
 			x += pivot;
 		}
@@ -133,14 +151,13 @@ void Plane::bufferLogic()
 	glBindVertexArray(vao);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
 
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vec4) * NumVertex * 2, NULL, GL_STATIC_DRAW);
-	glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vec4) * NumVertex, positions);
-	glBufferSubData(GL_ARRAY_BUFFER, sizeof(vec4) * NumVertex, sizeof(vec4) * NumVertex, colors);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(VertexInfo) * NumVertex, vertexInfo, GL_STATIC_DRAW);
+}
 
-	glEnableVertexAttribArray(vPosition);
-	glVertexAttribPointer(vPosition, 4, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
+void Plane::wave()
+{
+	bWave = !bWave;
 
-	glEnableVertexAttribArray(vColor);
-	glVertexAttribPointer(vColor, 4, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(vec4) * NumVertex));
+	glUniform1f(uWave, bWave);
 }
 #endif

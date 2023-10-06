@@ -2,13 +2,11 @@
 
 in vec4 color;
 in vec4 position;
+in float height;
 
 out vec4 fColor;
 
 void main()
 {
-	vec4 c = color;
-	float d = 0.05f;
-
-	fColor = c;
+	fColor = (height < 0) ? color + vec4(-height*3, 0.0, 0.0, 1.0) : color + vec4(0, 0, height*3, 1);
 }
