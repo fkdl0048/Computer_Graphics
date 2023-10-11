@@ -1,0 +1,4 @@
+﻿  MySphere.h
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\SimpleSphere\SimpleSphere\MySphere.h(47,12): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+MySphere.obj : error LNK2005: "unsigned int __cdecl InitShader(char const *,char const *)" (?InitShader@@YAIPBD0@Z)이(가) main.obj에 이미 정의되어 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\SimpleSphere\Debug\SimpleSphere.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.
