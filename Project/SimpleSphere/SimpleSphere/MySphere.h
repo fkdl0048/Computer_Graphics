@@ -34,8 +34,8 @@ public:
 	{
 		if (m_NumDiv == div || div < 3) return;
 		m_NumDiv = div;
-		//m_NumVertex = (m_NumDiv * 2 + (m_NumDiv - 2) * m_NumDiv * 2) * 3;
-		m_NumVertex = (m_NumDiv - 2) * m_NumDiv * 2 * 3;
+		m_NumVertex = (m_NumDiv*2 + (m_NumDiv-2)*m_NumDiv*2)*3;
+		//m_NumVertex = (m_NumDiv - 2) * m_NumDiv * 2 * 3;
 
 		printf("cur div = %d  cur vertices = %d \n", m_NumDiv, m_NumVertex);
 
@@ -47,57 +47,50 @@ public:
 		float da = 2 * 3.141592 / m_NumDiv;
 		for (int i = 0; i < m_NumDiv; i++)
 		{
-			for (int j = 1; j < m_NumDiv - 1; j++)
+			for (int j = 0; j < m_NumDiv; j++)
 			{
-				// (i, j), (i, j + 1), (i + 1, j + 1), (i + 1, j)
-				//  a       b           c               d
+				// (i,j), (i, j+1), (i+1, j+1), (i+1, j)
+				//  a      b         c           d
+				// i
+				float z1 = cos(i * da);			// r cos(theta)
+				float x1 = sin(i * da);			// r sin(theta)
+				// i+1
+				float z2 = cos((i + 1) * da);			// r cos(theta)
+				float x2 = sin((i + 1) * da);			// r sin(theta)
 
-				// i, j 老 锭
+				// j
 				float j1 = 3.141592f / 2.0f - j * da / 2;
 				float r1 = r * cos(j1);
-
-				float z1 = r * cos(i * da);
-				float x1 = r * sin(i * da);
 				float y1 = r * sin(j1);
 
-				// i, j + 1 老 锭
-				float j2 = 3.141592f / 2.0f - (j + 1) * da / 2;
+				// j+1
+				float j2 = 3.141592f / 2.0f - (j+1) * da / 2;
 				float r2 = r * cos(j2);
-
-				float z2 = r2 * cos(i * da);
-				float x2 = r2 * sin(i * da);
 				float y2 = r * sin(j2);
+								
+				vec4 a = vec4(r1*x1, y1, r1*z1, 1);		// (i,j)
+				vec4 b = vec4(r2*x1, y2, r2*z1, 1);		// (i, j+1)
+				vec4 c = vec4(r2*x2, y2, r2*z2, 1);		// (i+1, j+1)
+				vec4 d = vec4(r1*x2, y1, r1*z2, 1);		// (i+1, j)
 
-				// i + 1, j + 1 老 锭
-				float j3 = 3.141592f / 2.0f - (j + 1) * da / 2;
-				float r3 = r * cos(j3);
+				vec4 color = vec4(1,0,0,1);
+				if ((i + j) % 2 == 1)
+					color = vec4(0, 0, 1, 1);
 
-				float z3 = r3 * cos((i + 1) * da);
-				float x3 = r3 * sin((i + 1) * da);
-				float j3 = r * sin(j3);
-				
-				// i + 1, j老 锭
-				float x2 = r1 * cos((i + 1) * da);
-				float z2 = r1 * sin((i + 1) * da);
-				float y2 = r * sin(j1);
+				if (j != m_NumDiv - 1)
+				{
+					vertices[cur].pos = a;	vertices[cur].color = color; cur++;
+					vertices[cur].pos = b;	vertices[cur].color = color; cur++;
+					vertices[cur].pos = c;	vertices[cur].color = color; cur++;
+				}
 
-				vec4 a = vec4(x1, y1, z1, 1);
-				vec4 b = vec4(x2, -h / 2, z2, 1);
-				vec4 c = vec4(x1, -h / 2, z1, 1);
-				vec4 d = vec4(x1, h / 2, z1, 1);
-
-				float f = float(i) / m_NumDiv;
-				vec4 color = vec4(f, 0, 1 - f, 1);
-
-				vertices[cur].pos = a;	vertices[cur].color = color; cur++;
-				vertices[cur].pos = b;	vertices[cur].color = color; cur++;
-				vertices[cur].pos = c;	vertices[cur].color = color; cur++;
-
-				vertices[cur].pos = c;	vertices[cur].color = color; cur++;
-				vertices[cur].pos = d;	vertices[cur].color = color; cur++;
-				vertices[cur].pos = a;	vertices[cur].color = color; cur++;
+				if (j != 0)
+				{
+					vertices[cur].pos = c;	vertices[cur].color = color; cur++;
+					vertices[cur].pos = d;	vertices[cur].color = color; cur++;
+					vertices[cur].pos = a;	vertices[cur].color = color; cur++;
+				}
 			}
-
 		}
 
 		if (m_bInit == false)

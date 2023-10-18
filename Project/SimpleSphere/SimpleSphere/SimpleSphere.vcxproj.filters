@@ -15,27 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\Downloads\MyCylinder (1)\main.cpp">
+    <None Include="fshader.glsl">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="vshader.glsl">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="MySphere.h">
-      <Filter>헤더 파일</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\..\Downloads\MyCylinder (1)\MyColorCube.h">
+    <ClInclude Include="MyCylinder.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\..\Downloads\MyCylinder (1)\MyCylinder.h">
+    <ClInclude Include="MySphere.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\..\..\..\Downloads\MyCylinder (1)\fshader.glsl">
-      <Filter>리소스 파일</Filter>
-    </None>
-    <None Include="..\..\..\..\..\..\..\Downloads\MyCylinder (1)\vshader.glsl">
-      <Filter>리소스 파일</Filter>
-    </None>
+    <ClInclude Include="MyColorCube.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
