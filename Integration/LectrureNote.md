@@ -452,3 +452,41 @@ but 3차원 구는 불가능
 
 쿼터니언이란, 4차원 벡터를 사용하여 3차원 회전을 표현하는 방법
 
+## GC13
+
+### Geometry Transformations
+
+openGl 3차원 좌표가 2D 좌표로 변환되는 과정
+
+로컬, 모델 좌표계에서 월드 좌표계로 이동 (Model Transform)
+
+월드 좌표계에서 카메라 좌표계로 이동 (View Transform)
+
+카메라 좌표계에서 화면 좌표계로 이동 (Projection Transform)
+
+이 과정은 4x4 행렬로 표현된다.
+
+화면 크기에 따라 달라지기 때문에 Normalized coordinate로 변환한다. (1x1)
+
+#### Model Transform
+
+물체를 가져다 놓는 것 (모양변화는 없다고 가정)
+
+크기와 위치, 회전만 담당
+
+scaling -> rotation -> translation 순으로 적용
+
+```c
+M = Translate(0,0,0) * RotateY(30) * Scale(1, 1.5, 1);
+```
+
+하나의 정보만 전해주고 이를 재활용하는 것을 인스턴싱이라고 한다.
+
+*model transform을 instance transform이라고도 한다.*
+
+
+
+#### View Transform
+
+
+#### Projection Transform
