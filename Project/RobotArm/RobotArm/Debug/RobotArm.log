@@ -1,0 +1,44 @@
+﻿  main.cpp
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(36,22): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(36,17): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(36,12): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(42,19): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(42,45): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(42,40): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(42,35): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(47,27): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(48,19): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(48,45): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(48,40): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(48,35): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(53,27): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(54,19): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(54,47): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(54,41): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(54,36): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(73,22): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(73,17): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(73,12): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(80,19): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(80,45): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(80,40): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(80,35): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(86,27): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(87,19): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(87,46): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(87,41): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(87,36): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(93,25): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(94,19): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(94,45): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(94,40): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(94,35): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(103,24): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(104,19): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(104,45): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(104,40): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(104,35): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(116,12): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(117,13): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\RobotArm\main.cpp(118,13): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  RobotArm.vcxproj -> C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\RobotArm\Debug\RobotArm.exe
