@@ -493,4 +493,62 @@ M = Translate(0,0,0) * RotateY(30) * Scale(1, 1.5, 1);
 
 ## CG14
 
-  
+## GC15
+
+## GC16
+
+projection(투영)에는 두가지가 있다.
+
+투영을 표현하기 위해선 카메라가 필요
+
+- Simple Parallel Projections
+  - 크기변화가 없이 그대로
+- Simple Perspective Projections
+  - 뒤에 있는건 작게, 앞에 있는 건 크게
+
+### Projection
+
+object coordinate -> Camera coordinate -> clip coordinate
+
+즉, 프로젝션은 3D정보를 2D정보로 표현(3D정보를 버리지 않음)
+
+한번 2D가 되면 3D를 되살릴 수 없다. (하지만 3D정보가 있어서 가능하긴 함)
+
+4x4 행렬로 표현
+
+### Parallel Projection(평행 투영)
+
+같은 크기로 그리고 싶을 때 사용
+
+평행투영은 현실에서 볼 수 없지만, 매우 멀리있는 경우 현실에서 일어남
+
+ex) 망원렌즈 (아주 멀리있는걸 확대한 경우)
+
+앞에 있는 물체와 뒤에 있는 물체의 크기차이가 없기 때문에 문제가 발생하기도 한다.
+
+- Impossible Objects
+
+건축, 게임, 특정 애플리케이션에서 사용
+
+- Orthographic Projection(정사영, 수직투영)
+  - z축을 0으로 만들어서 2D로 만드는 것
+  - 다시 복구가 불가능하기 때문에 역행렬이 없다.
+  - 하지만 앞 물체가 뒤 물체를 가려야 하기에 기술을 사용
+  - z버퍼, z값의 범위가 필요(해상도)
+    - 사용자가 보고 싶은 범위를 넣어주면 이를 컴퓨터가 재 스케일링하여 (1을 나눠서) 0~1사이의 값으로 만들어줌
+
+> glOrtho(xmin, xmax, ymin, ymax, near, far)  
+> x나 y를 다 주진 않음 종횡비를 맞추기 때문
+
+- Normalized view volume
+
+> Ortho(left,right,bottom,top,near,far)  
+
+- 센터를 구하기 위해 left, right, bottom, top을 사용 2/1하여 센터를 구한다.
+- 이후에 중심축으로 가져오고 스케일링을 한다.
+
+z 값을 퀀타이전(양자화?)
+
+
+
+
