@@ -592,7 +592,31 @@ aspect는 종횡비
 
 - gluPerspective가 더 직관적임
 
+## GC18
 
+컴퓨터상 z값이 무한하지 않기에 z값을 near, far로 정의
 
+glFrustum은 xmin, xmax, ymin, ymax를 정의하고 far도 동일하게 정의한다.
 
+gluPerspective는 fovy, aspect, near, far를 정의한다.
+
+fov는 field of view, 시야각
+
+aspect는 종횡비
+
+를 정의하여 사용
+
+### canonical view volume
+
+- normalized view volume
+  - z값을 -1~1로 정의
+  - 이후에 z값을 0~1로 정의
+
+far를 1로 정의하게 되면 앞에 있는 물체들은 비율에 의해 재정의되어 0~1사이의 값으로 정의된다.
+
+### unhinging transformation
+
+원래는 시야각은 초점에서 방사형이지만 이를 힌지를 피듯이 펴서 보이게 하는 것
+
+### Perspective Projection
 
