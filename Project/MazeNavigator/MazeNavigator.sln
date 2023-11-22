@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MazeNavigator", "MazeNavigator\MazeNavigator.vcxproj", "{680432D9-651C-4913-852D-8DB0C86B2696}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{680432D9-651C-4913-852D-8DB0C86B2696}.Debug|x64.ActiveCfg = Debug|x64
+		{680432D9-651C-4913-852D-8DB0C86B2696}.Debug|x64.Build.0 = Debug|x64
+		{680432D9-651C-4913-852D-8DB0C86B2696}.Debug|x86.ActiveCfg = Debug|Win32
+		{680432D9-651C-4913-852D-8DB0C86B2696}.Debug|x86.Build.0 = Debug|Win32
+		{680432D9-651C-4913-852D-8DB0C86B2696}.Release|x64.ActiveCfg = Release|x64
+		{680432D9-651C-4913-852D-8DB0C86B2696}.Release|x64.Build.0 = Release|x64
+		{680432D9-651C-4913-852D-8DB0C86B2696}.Release|x86.ActiveCfg = Release|Win32
+		{680432D9-651C-4913-852D-8DB0C86B2696}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFCF1B52-BDA7-47E8-944C-64F796DEFB0A}
+	EndGlobalSection
+EndGlobal

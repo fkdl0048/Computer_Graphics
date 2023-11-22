@@ -1,0 +1,20 @@
+﻿  main.cpp
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\WindMill\main.cpp(38,20): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\WindMill\main.cpp(50,23): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\WindMill\main.cpp(50,17): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\WindMill\main.cpp(50,12): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\WindMill\main.cpp(60,22): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\WindMill\main.cpp(60,17): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\WindMill\main.cpp(60,12): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\WindMill\main.cpp(67,16): warning C4244: '인수': 'int'에서 'const GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\WindMill\main.cpp(67,31): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\WindMill\main.cpp(67,61): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\WindMill\main.cpp(67,56): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\WindMill\main.cpp(67,51): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+freeglut_static_vs2015_d.lib(fg_geometry.obj) : warning LNK4099: '' PDB를 'freeglut_static_vs2015_d.lib(fg_geometry.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+freeglut_static_vs2015_d.lib(fg_joystick.obj) : warning LNK4099: '' PDB를 'freeglut_static_vs2015_d.lib(fg_joystick.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+freeglut_static_vs2015_d.lib(fg_teapot.obj) : warning LNK4099: '' PDB를 'freeglut_static_vs2015_d.lib(fg_teapot.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+freeglut_static_vs2015_d.lib(fg_font.obj) : warning LNK4099: '' PDB를 'freeglut_static_vs2015_d.lib(fg_font.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+freeglut_static_vs2015_d.lib(fg_menu.obj) : warning LNK4099: '' PDB를 'freeglut_static_vs2015_d.lib(fg_menu.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+freeglut_static_vs2015_d.lib(fg_joystick_mswin.obj) : warning LNK4099: '' PDB를 'freeglut_static_vs2015_d.lib(fg_joystick_mswin.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+  WindMill.vcxproj -> C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\WindMill\Debug\WindMill.exe
