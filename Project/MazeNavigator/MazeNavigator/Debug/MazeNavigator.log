@@ -3,26 +3,24 @@ C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\
 C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(31,19): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
 C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(39,77): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(39,46): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(42,27): warning C4244: '인수': 'int'에서 'const GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(42,38): warning C4244: '인수': 'int'에서 'const GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(91,10): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(92,10): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(131,17): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(170,27): warning C4244: '인수': 'float'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(170,19): warning C4244: '인수': 'float'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(177,48): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(184,32): warning C4244: '인수': 'float'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(184,24): warning C4244: '인수': 'float'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(184,13): warning C4244: '인수': 'float'에서 'GLint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(185,6): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(217,11): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(218,12): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(228,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(228,21): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-freeglut_static_vs2015_d.lib(fg_geometry.obj) : warning LNK4099: '' PDB를 'freeglut_static_vs2015_d.lib(fg_geometry.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-freeglut_static_vs2015_d.lib(fg_joystick.obj) : warning LNK4099: '' PDB를 'freeglut_static_vs2015_d.lib(fg_joystick.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-freeglut_static_vs2015_d.lib(fg_teapot.obj) : warning LNK4099: '' PDB를 'freeglut_static_vs2015_d.lib(fg_teapot.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-freeglut_static_vs2015_d.lib(fg_font.obj) : warning LNK4099: '' PDB를 'freeglut_static_vs2015_d.lib(fg_font.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-freeglut_static_vs2015_d.lib(fg_menu.obj) : warning LNK4099: '' PDB를 'freeglut_static_vs2015_d.lib(fg_menu.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-freeglut_static_vs2015_d.lib(fg_joystick_mswin.obj) : warning LNK4099: '' PDB를 'freeglut_static_vs2015_d.lib(fg_joystick_mswin.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(45,27): warning C4244: '인수': 'int'에서 'const GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(45,38): warning C4244: '인수': 'int'에서 'const GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(98,10): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(99,10): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(103,68): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(103,62): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(110,65): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(110,59): warning C4305: '인수': 'double'에서 'const GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(139,17): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(175,27): warning C4244: '인수': 'float'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(175,19): warning C4244: '인수': 'float'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(182,48): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(189,32): warning C4244: '인수': 'float'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(189,24): warning C4244: '인수': 'float'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(189,13): warning C4244: '인수': 'float'에서 'GLint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(190,6): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(222,11): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(223,12): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(233,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\MazeNavigator\main.cpp(233,21): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   MazeNavigator.vcxproj -> C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\MazeNavigator\Debug\MazeNavigator.exe

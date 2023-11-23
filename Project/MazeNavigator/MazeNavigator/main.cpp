@@ -9,16 +9,16 @@
 #include <vec.h>
 #include <mat.h>
 
-#define MAZE_FILE	"maze.txt"
+#define MAZE_FILE	"maze.txt"	// 읽어들일 텍스트 파일
 
-MyCube cube;
+MyCube cube;					// 프로그램에 사용할 Cube모델
 GLuint program;
 
 mat4 g_Mat = mat4(1.0f);
 GLuint uMat;
 GLuint uColor;
 
-float wWidth = 1000;
+float wWidth = 1000;			// 뷰포인트가 2개로 나뉘기 때문에 1000
 float wHeight = 500;
 
 vec3 cameraPos = vec3(0, 0, 0);
@@ -32,16 +32,20 @@ float cameraSpeed = 0.1;
 
 float g_time = 0;
 
-
+// 인덱스를 받아 위치륿 반환하는 함수 inline
 inline vec3 getPositionFromIndex(int i, int j)
 {
 	float unit = 1;
-	vec3 leftTopPosition = vec3(-MazeSize / 2.0 + unit / 2, 0, -MazeSize / 2.0 + unit / 2);
+	vec3 leftTopPosition = vec3(-MazeSize / 2.0 + unit / 2, 0, -MazeSize / 2.0 + unit / 2); // -9.5, 0, -9.5
 	vec3 xDir = vec3(1, 0, 0);
 	vec3 zDir = vec3(0, 0, 1);
+
+	//printf("!!: %f, %f, %f \n", leftTopPosition.x, leftTopPosition.y, leftTopPosition.z);
+
 	return leftTopPosition + i * xDir + j * zDir;
 }
 
+// 미로를 읽어오는 함수
 void LoadMaze()
 {
 	FILE* file = fopen(MAZE_FILE, "r");
@@ -63,6 +67,7 @@ void LoadMaze()
 	fclose(file);
 }
 
+// 미로를 그리는 함수
 void DrawMaze()
 {
 	for (int j = 0; j < MazeSize; j++)
@@ -70,13 +75,14 @@ void DrawMaze()
 			if (maze[i][j] == '*')
 			{
 				vec3 color = vec3(i / (float)MazeSize, j / (float)MazeSize, 1);
-				mat4 ModelMat = Translate(getPositionFromIndex(i, j));
+				mat4 ModelMat = Translate(getPositionFromIndex(i, j)); // 2차원 배열의 위치로 위치변경
 				glUniformMatrix4fv(uMat, 1, GL_TRUE, g_Mat * ModelMat);
 				glUniform4f(uColor, color.x, color.y, color.z, 1);
 				cube.Draw(program);
 			}
 }
 
+// 초기화 함수
 void myInit()
 {
 	LoadMaze();
@@ -85,6 +91,7 @@ void myInit()
 
 }
 
+// 바닥의 Grid를 그리는 함수
 void DrawGrid()
 {
 	float n = 40;
@@ -107,7 +114,7 @@ void DrawGrid()
 	}
 }
 
-
+// 맵의 카메라 그리기
 void drawCamera()
 {
 	float cameraSize = 0.5;
@@ -125,6 +132,7 @@ void drawCamera()
 	cube.Draw(program);
 }
 
+// 골대 그리기
 void drawGoal()
 {
 	glUseProgram(program);
@@ -141,7 +149,7 @@ void drawGoal()
 	cube.Draw(program);
 }
 
-
+// 신 그리기
 void drawScene(bool bDrawCamera = true)
 {
 	glUseProgram(program);
@@ -154,11 +162,9 @@ void drawScene(bool bDrawCamera = true)
 
 	if (bDrawCamera)
 		drawCamera();
-
-
-
 }
 
+// 화면 Update 함수
 void display()
 {
 	glEnable(GL_DEPTH_TEST);
@@ -189,7 +195,6 @@ void display()
 
 	g_Mat = ProjMat * ViewMat;
 	drawScene(true);
-
 
 	glutSwapBuffers();
 }
