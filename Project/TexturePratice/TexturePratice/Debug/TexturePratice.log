@@ -1,0 +1,16 @@
+﻿  main.cpp
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\MySphere.h(55,11): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\MySphere.h(56,11): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(47,12): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(92,20): error C2059: 구문 오류: ')'
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(118,45): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(127,29): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(127,24): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(127,19): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(133,29): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(133,24): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(133,19): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(135,29): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(135,24): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(135,19): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\TexturePratice\TexturePratice\main.cpp(175,18): warning C4305: '+=': 'double'에서 'float'(으)로 잘립니다.
