@@ -96,6 +96,8 @@ openGL에서는 glOrtho()를 사용한다.
 
 ### Orthogonal Matrix
 
+![Alt text](image-30.png)
+
 - 가장 먼저 Centering을 한다. (원점으로 중심이동)
   - T(-(left+right)/2, -(bottom+top)/2, -(near+far)/2)
   - 마지막인자를 near로 하는 경우도 있다.
@@ -157,7 +159,7 @@ parallel view volume
 
 ![Alt text](image-2.png)
 
-*c는 위에서 계산함*
+$$ c = -\frac{near}{far}$$
 
 ![Alt text](image-3.png)
 
