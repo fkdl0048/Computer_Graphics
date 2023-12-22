@@ -1,0 +1,21 @@
+﻿  main.cpp
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\MySphere.h(55,11): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\MySphere.h(56,11): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(56,32): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(56,27): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(56,22): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(57,32): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(57,27): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(57,22): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(63,32): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(63,27): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(63,22): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(69,14): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(75,12): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(79,42): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(95,28): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(130,12): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(217,53): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(217,20): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\raytracer\main.cpp(221,45): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  raytracer.vcxproj -> C:\Users\fkdl0\Documents\University\23_2\Computer_Graphis\Project\raytracer\Debug\raytracer.exe
